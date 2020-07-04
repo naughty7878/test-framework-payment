@@ -5,5 +5,5 @@ package com.test.payment.api;
  */
 public interface PaymentInterface {
     // 服务名称
-    String SERVICE_NAME = "payment-service";
+    String SERVICE_NAME = "payment-server";
 }
