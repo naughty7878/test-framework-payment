@@ -12,11 +12,10 @@
     <artifactId>framework-payment-provider</artifactId>
 
     <dependencies>
-
-        <!-- eureka server -->
+        <!-- spring cloud config client-->
         <dependency>
             <groupId>org.springframework.cloud</groupId>
-            <artifactId>spring-cloud-config-server</artifactId>
+            <artifactId>spring-cloud-starter-config</artifactId>
         </dependency>
 
         <!-- eureka client -->
