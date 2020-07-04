@@ -14,7 +14,7 @@ import java.util.List;
 public interface PaymentService extends PaymentRemoteService {
 
     @Component
-    public static class HystrixClientFallback implements PaymentRemoteService {
+    public static class HystrixClientFallback implements PaymentService {
 
         @Override
         public CommonResult<Integer> save(Payment payment) {
