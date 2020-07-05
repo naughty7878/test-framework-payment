@@ -1,6 +1,7 @@
 package com.test.payment.client.factories;
 
-import com.test.payment.client.util.SpringUtils;
+//import com.test.payment.client.util.SpringUtils;
+import cn.hutool.extra.spring.SpringUtil;
 import lombok.extern.slf4j.Slf4j;
 import org.springframework.beans.factory.FactoryBean;
 
@@ -23,7 +24,8 @@ public class ServiceFactory<T> implements FactoryBean<T> {
     public synchronized T getObject()  {
         if(object == null) {
             try {
-                object = SpringUtils.getBean(objectType);
+//                object = SpringUtils.getBean(objectType);
+                object = SpringUtil.getBean(objectType);
             } catch (Exception e) {
                 log.error("获取Beat失败!", e);
             }
