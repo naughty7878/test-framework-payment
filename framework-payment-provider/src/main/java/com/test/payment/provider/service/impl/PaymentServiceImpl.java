@@ -3,6 +3,7 @@ package com.test.payment.provider.service.impl;
 import com.test.payment.api.model.Payment;
 import com.test.payment.provider.mapper.PaymentMapper;
 import com.test.payment.provider.service.PaymentService;
+import org.springframework.beans.BeanUtils;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Service;
 
@@ -20,7 +21,10 @@ public class PaymentServiceImpl implements PaymentService {
     }
 
     public Payment get(Long id) {
-        return paymentMapper.get(id);
+        com.test.payment.provider.entity.Payment payment = paymentMapper.get(id);
+        Payment payment1 = new Payment();
+        BeanUtils.copyProperties(payment, payment1);
+        return payment1;
     }
 
     @Override
