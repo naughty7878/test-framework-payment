@@ -1,4 +1,4 @@
-# test-framework-paymentRespDto
+# test-framework-payment
 
 ## 示例服务-支付模块
 

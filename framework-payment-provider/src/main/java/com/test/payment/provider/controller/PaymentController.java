@@ -1,6 +1,6 @@
 package com.test.payment.provider.controller;
 
-import com.test.common.entities.CommonResult;
+import com.test.common.entity.CommonResult;
 import com.test.payment.api.dto.PaymentReqDto;
 import com.test.payment.api.dto.PaymentRespDto;
 import com.test.payment.api.service.PaymentRemoteService;

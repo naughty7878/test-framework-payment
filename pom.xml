@@ -10,7 +10,7 @@
     <modelVersion>4.0.0</modelVersion>
 
     <groupId>com.test</groupId>
-    <artifactId>test-framework-paymentRespDto</artifactId>
+    <artifactId>test-framework-payment</artifactId>
     <packaging>pom</packaging>
     <version>1.0.0-SNAPSHOT</version>
     <modules>
@@ -37,7 +37,7 @@
             </dependency>
             <dependency>
                 <groupId>com.test</groupId>
-                <artifactId>framework-paymentRespDto-api</artifactId>
+                <artifactId>framework-payment-api</artifactId>
                 <version>${project.version}</version>
             </dependency>
         </dependencies>

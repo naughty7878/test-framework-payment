@@ -1,7 +1,7 @@
 
 package com.test.payment.api.service;
 
-import com.test.common.entities.CommonResult;
+import com.test.common.entity.CommonResult;
 import com.test.payment.api.dto.PaymentReqDto;
 import com.test.payment.api.dto.PaymentRespDto;
 import org.springframework.web.bind.annotation.RequestBody;
