@@ -1,8 +1,8 @@
 package com.test.payment.client;
 
 import com.test.common.entities.CommonResult;
-import com.test.payment.api.bo.PaymentBo;
-import com.test.payment.api.model.Payment;
+import com.test.payment.api.dto.PaymentReqDto;
+import com.test.payment.api.dto.PaymentRespDto;
 import com.test.payment.client.factories.ServiceFactory;
 import com.test.payment.client.service.PaymentService;
 
@@ -19,9 +19,9 @@ public class PaymentClient {
 
     private static final ServiceFactory<PaymentService> serviceFactory = new ServiceFactory<>(PaymentService.class);
 
-    public static CommonResult<Payment> get(PaymentBo paymentBo)  {
+    public static CommonResult<PaymentRespDto> get(PaymentReqDto paymentReqDto)  {
         PaymentService paymentService = serviceFactory.getObject();
-        return paymentService.get(paymentBo);
+        return paymentService.get(paymentReqDto);
     }
 
 }

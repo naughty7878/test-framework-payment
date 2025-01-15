@@ -20,7 +20,7 @@ public class Generator {
                 })
                 .packageConfig(builder -> {
                     builder.parent("com") // 设置父包名
-                            .moduleName("test") // 设置父包模块名
+                            .moduleName("test.payment.provider") // 设置父包模块名
                             .pathInfo(Collections.singletonMap(OutputFile.xml, "C:\\Users\\H__D\\Desktop")); // 设置mapperXml生成路径
                 })
                 .strategyConfig(builder -> {

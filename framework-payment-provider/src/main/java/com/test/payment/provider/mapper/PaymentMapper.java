@@ -1,7 +1,7 @@
 package com.test.payment.provider.mapper;
 
-import com.baomidou.mybatisplus.core.mapper.BaseMapper;
 import com.test.payment.provider.entity.Payment;
+import com.baomidou.mybatisplus.core.mapper.BaseMapper;
 import org.apache.ibatis.annotations.Mapper;
 import org.apache.ibatis.annotations.Param;
 
@@ -15,5 +15,7 @@ import org.apache.ibatis.annotations.Param;
  */
 @Mapper
 public interface PaymentMapper extends BaseMapper<Payment> {
-    public Payment get(@Param("id")Long id);
+
+    Payment get(@Param("id") Long id);
+
 }

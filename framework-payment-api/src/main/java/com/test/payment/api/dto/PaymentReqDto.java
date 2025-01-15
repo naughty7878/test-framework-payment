@@ -1,4 +1,4 @@
-package com.test.payment.api.bo;
+package com.test.payment.api.dto;
 
 import lombok.Data;
 
@@ -6,6 +6,6 @@ import lombok.Data;
  * 定制业务参数
  */
 @Data
-public class PaymentBo {
+public class PaymentReqDto {
     private Long id;
 }

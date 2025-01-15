@@ -2,8 +2,8 @@ package com.test.payment.client.service;
 
 import com.test.common.entities.CommonResult;
 import com.test.payment.api.PaymentInterface;
-import com.test.payment.api.bo.PaymentBo;
-import com.test.payment.api.model.Payment;
+import com.test.payment.api.dto.PaymentReqDto;
+import com.test.payment.api.dto.PaymentRespDto;
 import com.test.payment.api.service.PaymentRemoteService;
 import org.springframework.cloud.openfeign.FeignClient;
 import org.springframework.stereotype.Component;
@@ -17,17 +17,17 @@ public interface PaymentService extends PaymentRemoteService {
     public static class HystrixClientFallback implements PaymentService {
 
         @Override
-        public CommonResult<Integer> save(Payment payment) {
+        public CommonResult<Integer> save(PaymentRespDto paymentRespDto) {
             return null;
         }
 
         @Override
-        public CommonResult<Payment> get(PaymentBo paymentBo) {
+        public CommonResult<PaymentRespDto> get(PaymentReqDto paymentReqDto) {
             return new CommonResult(500, "服务异常");
         }
 
         @Override
-        public List<Payment> list(PaymentBo paymentBo) {
+        public List<PaymentRespDto> list(PaymentReqDto paymentReqDto) {
             return null;
         }
     }

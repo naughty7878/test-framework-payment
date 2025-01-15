@@ -2,8 +2,8 @@
 package com.test.payment.api.service;
 
 import com.test.common.entities.CommonResult;
-import com.test.payment.api.bo.PaymentBo;
-import com.test.payment.api.model.Payment;
+import com.test.payment.api.dto.PaymentReqDto;
+import com.test.payment.api.dto.PaymentRespDto;
 import org.springframework.web.bind.annotation.RequestBody;
 import org.springframework.web.bind.annotation.RequestMapping;
 import org.springframework.web.bind.annotation.RequestMethod;
@@ -16,11 +16,11 @@ import java.util.List;
 public interface PaymentRemoteService {
     // 保存
     @RequestMapping(value = {"/payment/save"}, method = {RequestMethod.POST})
-    CommonResult<Integer> save (@RequestBody Payment payment);
+    CommonResult<Integer> save (@RequestBody PaymentRespDto paymentRespDto);
     // 获取
     @RequestMapping(value = {"/payment/get"}, method = {RequestMethod.POST})
-    CommonResult<Payment> get(@RequestBody PaymentBo paymentBo);
+    CommonResult<PaymentRespDto> get(@RequestBody PaymentReqDto paymentReqDto);
     // 查询
     @RequestMapping(value = {"/payment/list"}, method = {RequestMethod.POST})
-    List<Payment> list(@RequestBody PaymentBo paymentBo);
+    List<PaymentRespDto> list(@RequestBody PaymentReqDto paymentReqDto);
 }

@@ -10,7 +10,7 @@
     <modelVersion>4.0.0</modelVersion>
 
     <groupId>com.test</groupId>
-    <artifactId>test-framework-payment</artifactId>
+    <artifactId>test-framework-paymentRespDto</artifactId>
     <packaging>pom</packaging>
     <version>1.0.0-SNAPSHOT</version>
     <modules>
@@ -21,6 +21,9 @@
 
     <properties>
         <test-framework.version>1.0.0-SNAPSHOT</test-framework.version>
+        <java.version>1.8</java.version>
+        <project.build.sourceEncoding>UTF-8</project.build.sourceEncoding>
+        <project.reporting.outputEncoding>UTF-8</project.reporting.outputEncoding>
     </properties>
 
     <dependencyManagement>
@@ -34,7 +37,7 @@
             </dependency>
             <dependency>
                 <groupId>com.test</groupId>
-                <artifactId>framework-payment-api</artifactId>
+                <artifactId>framework-paymentRespDto-api</artifactId>
                 <version>${project.version}</version>
             </dependency>
         </dependencies>

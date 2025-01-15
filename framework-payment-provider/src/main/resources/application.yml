@@ -11,10 +11,6 @@ spring:
     username: root
     password: 123456
 
-mybatis:
-  mapperLocations: classpath:mapper/*Mapper.xml
-
-
 management:
   endpoints:
     web:
