@@ -31,16 +31,12 @@
                  解决：默认不加载bootstrap.yml文件问题-->
         </dependency>
 
-        <dependency>
-            <groupId>org.springframework.cloud</groupId>
-            <artifactId>spring-cloud-commons</artifactId>
-        </dependency>
-
         <!-- sleuth 链路追踪 -->
         <dependency>
             <groupId>org.springframework.cloud</groupId>
             <artifactId>spring-cloud-starter-sleuth</artifactId>
         </dependency>
+
 
         <!-- spring boot -->
         <dependency>
@@ -52,10 +48,19 @@
             <artifactId>spring-boot-starter-actuator</artifactId>
         </dependency>
 
-
         <dependency>
             <groupId>org.springframework.boot</groupId>
             <artifactId>spring-boot-starter-jdbc</artifactId>
+        </dependency>
+
+        <dependency>
+            <groupId>org.springframework.cloud</groupId>
+            <artifactId>spring-cloud-commons</artifactId>
+        </dependency>
+
+        <dependency>
+            <groupId>com.test</groupId>
+            <artifactId>framework-payment-api</artifactId>
         </dependency>
 
         <dependency>
@@ -102,10 +107,6 @@
             </exclusions>
         </dependency>
 
-        <dependency>
-            <groupId>com.test</groupId>
-            <artifactId>framework-payment-api</artifactId>
-        </dependency>
     </dependencies>
 
     <build>

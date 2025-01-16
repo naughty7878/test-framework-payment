@@ -1,6 +1,6 @@
 package com.test.payment.client.service;
 
-import com.test.common.entities.CommonResult;
+import com.test.common.entity.CommonResult;
 import com.test.payment.api.PaymentInterface;
 import com.test.payment.api.dto.PaymentReqDto;
 import com.test.payment.api.dto.PaymentRespDto;
@@ -23,7 +23,7 @@ public interface PaymentService extends PaymentRemoteService {
 
         @Override
         public CommonResult<PaymentRespDto> get(PaymentReqDto paymentReqDto) {
-            return new CommonResult(500, "服务异常");
+            return new CommonResult(500, "服务异常", null);
         }
 
         @Override
