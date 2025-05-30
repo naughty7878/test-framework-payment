@@ -33,7 +33,7 @@ spring:
 logging:
   level:
     root: debug
-#    org.apache.coyote.http11.Http11Processor: WARN
+    org.apache.coyote.http11.Http11Processor: WARN
   path: /data/logs
 
 
