@@ -3,17 +3,37 @@ server:
   port: 20704
 
 spring:
-#  application:
-#    name: payment-server
+  application:
+    name: payment-server
+  config:
+    import:
+      - optional:nacos:${spring.application.name}
+  cloud:
+    nacos:
+      discovery:
+        server-addr: 192.168.1.152:8848   # Nacos 地址
+        username: nacos                   # 默认账号
+        password: nacos                   # 默认密码
+        namespace: 0de7e8a0-5088-422a-8aa9-c172e46241f1        # 命名空间
+      config:
+        server-addr: 192.168.1.152:8848   # Nacos 地址
+        username: nacos                   # 默认账号
+        password: nacos                   # 默认密码
+        namespace: 0de7e8a0-5088-422a-8aa9-c172e46241f1
+        file-extension: yaml              # 配置内容文件的数据格式，默认值：properties
+        group: DEFAULT_GROUP
+        refresh-enabled: true  # 可选：启用动态刷新
   datasource:
     driver-class-name: com.mysql.cj.jdbc.Driver
-    url: jdbc:mysql://localhost:3306/test_springcloud?allowPublicKeyRetrieval=true&useSSL=true
+    url: jdbc:mysql://192.168.1.170:3306/test_springcloud?allowPublicKeyRetrieval=true&useSSL=false
     username: root
     password: 123456
+
 
 logging:
   level:
     root: debug
+#    org.apache.coyote.http11.Http11Processor: WARN
   path: /data/logs
 
 
