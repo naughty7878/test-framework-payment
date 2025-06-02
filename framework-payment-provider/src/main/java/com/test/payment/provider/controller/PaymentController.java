@@ -6,7 +6,9 @@ import com.test.payment.api.dto.PaymentRespDto;
 import com.test.payment.api.service.PaymentRemoteService;
 import com.test.payment.provider.service.IPaymentService;
 import org.springframework.beans.factory.annotation.Autowired;
+import org.springframework.util.MultiValueMap;
 import org.springframework.web.bind.annotation.RequestBody;
+import org.springframework.web.bind.annotation.RequestHeader;
 import org.springframework.web.bind.annotation.RestController;
 
 import java.util.List;
@@ -23,7 +25,8 @@ public class PaymentController implements PaymentRemoteService {
     }
 
     @Override
-    public CommonResult<PaymentRespDto> get(@RequestBody PaymentReqDto paymentReqDto) {
+    public CommonResult<PaymentRespDto> get(@RequestBody PaymentReqDto paymentReqDto,
+                                            @RequestHeader MultiValueMap<String, String> headers) {
         PaymentRespDto paymentRespDto = paymentService.get(paymentReqDto.getId());
         return new CommonResult(0, null, paymentRespDto);
     }
