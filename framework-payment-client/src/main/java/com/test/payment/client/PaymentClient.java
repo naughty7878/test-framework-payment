@@ -21,7 +21,7 @@ public class PaymentClient {
 
     public static CommonResult<PaymentRespDto> get(PaymentReqDto paymentReqDto)  {
         PaymentService paymentService = serviceFactory.getObject();
-        return paymentService.get(paymentReqDto);
+        return paymentService.get(paymentReqDto, null);
     }
 
 }

@@ -7,6 +7,7 @@ import com.test.payment.api.dto.PaymentRespDto;
 import com.test.payment.api.service.PaymentRemoteService;
 import org.springframework.cloud.openfeign.FeignClient;
 import org.springframework.stereotype.Component;
+import org.springframework.util.MultiValueMap;
 
 import java.util.List;
 
@@ -22,7 +23,7 @@ public interface PaymentService extends PaymentRemoteService {
         }
 
         @Override
-        public CommonResult<PaymentRespDto> get(PaymentReqDto paymentReqDto) {
+        public CommonResult<PaymentRespDto> get(PaymentReqDto paymentReqDto, MultiValueMap<String, String> headers) {
             return new CommonResult(500, "服务异常", null);
         }
 
